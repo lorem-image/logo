@@ -1,0 +1,47 @@
+.block {
+  display: block;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+
+.no-z-index {
+  z-index: 0;
+}
+
+.center-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.halfway-to-the-left {
+  transform: translateX(-50%);
+}
+.halfway-to-the-right {
+  transform: translateX(50%);
+}
+.halfway-to-the-top {
+  transform: translateY(-50%);
+}
+.halfway-to-the-bottom {
+  transform: translateY(50%);
+}
