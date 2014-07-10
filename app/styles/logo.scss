@@ -29,6 +29,14 @@
     }
   }
 
+  &.letter-i {
+    width: 12%;
+
+    .letter-part {
+      width: 33.33%;
+    }
+  }
+
   .letter-part {
     width: 25%;
     height: auto;
