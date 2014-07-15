@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loremImageLogoApp')
-  .controller('LogoCtrl', function ($scope, $timeout, $safeApply) {
+  .controller('LogoCtrl', ['$scope', '$timeout', '$safeApply', '_', function ($scope, $timeout, $safeApply, _) {
 
 
     // $scope.loadingState = true;
@@ -10,10 +10,10 @@ angular.module('loremImageLogoApp')
     // }, 1000);
 
     $scope.sections = ['No Section'].concat('abstract animals business cats city food nightlife fashion people nature sports technics transport'.split(' ').sort())
-      .map(function(section, i) {
+      .map(function(section) {
         return {
           label: section,
-          value: section == 'No Section' ? null : section
+          value: section === 'No Section' ? null : section
         };
       });
 
@@ -48,10 +48,10 @@ angular.module('loremImageLogoApp')
 
     $scope.getUncachedImageUrl = function(cacheToken) {
       return $scope.imageUrl + '?no-cache=' + cacheToken;//(cacheToken || ((+ new Date) + '_' + Math.random()));
-    }
+    };
 
     $scope.$watch('imageParams', _.throttle(function() {
       $scope.paramsToUrl();
       $safeApply();
     }, 100, true) , true);
-  });
+  }]);
